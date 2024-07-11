@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 基本样式 */
 body {
     font-family: "Ubuntu", sans-serif;
     margin: 0;
@@ -10,7 +9,6 @@ body {
     box-sizing: border-box;
     padding-top: 105px; /* 导航栏高度 */
 }
-
 
 .navigation {
     position: fixed; /* 固定位置 */
@@ -24,17 +22,20 @@ body {
     color: white;
     z-index: 1000; /* 确保在其他内容之上 */
 }
+
 .logo img {
     width: 140px; /* 根据需要调整宽度 */
     height: auto; /* 保持比例 */
 }
-.wrap{
+
+.wrap {
     width: 1226px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center; 
 }
+
 .title {
     margin-top: 10px;
     font-size: 2.5em;
@@ -61,10 +62,12 @@ body {
     transition: color 0.3s; /* 添加过渡效果 */
     font-size: 1.5em;
 }
-.nav-links a:hover {
-    color: #ff4500; /* 橘红色 */
-}
 
+.nav-links a:hover {
+    /* color: #ff4500;  */
+    color:#1685a9;
+    text-decoration: underline;
+}
 
 /* 轮播图样式 */
 .hero-banner {
@@ -90,24 +93,23 @@ body {
     object-fit: cover; /* 确保图片覆盖整个区域并保持纵横比 */
 }
 
-
-
 /* 内容区域样式 */
 .content {
     width: 1226px;
     margin: 0 auto; 
 }
+
 .content h2 {
     margin-bottom: 10px;
 }
-.content hr{
+
+.content hr {
     margin-bottom: 20px;
 }
-.wrap-c{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* 调整对齐方式 */
-    /* gap:20px; */
+
+.wrap-c {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .left-content,
@@ -116,6 +118,7 @@ body {
     margin: 10px;
     box-sizing: border-box;
 }
+
 .left-content {
     margin-right: 4%;
 }
@@ -126,7 +129,9 @@ body {
 
 .video {
     margin-bottom: 20px;
+    width: 100%;
 }
+
 .video video {
     width: 100%; /* 确保视频宽度不超过父容器 */
     height: auto; /* 保持视频的纵横比 */
@@ -189,11 +194,11 @@ body {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 列 */
-    grid-template-rows: repeat(5, auto); /* 5 行，根据内容自动调整高度 */
+    grid-template-columns: repeat(4, 1fr); /* 默认 4 列布局 */
     gap: 10px; /* 设置卡片之间的间距 */
     justify-items: center; /* 居中对齐 */
 }
+
 .link-no-decoration {
     text-decoration: none;
     color: inherit;
@@ -215,10 +220,12 @@ body {
     transition: all 0.2s linear;
     cursor: pointer;
 }
-.card img:hover{
+
+.card img:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
 }
+
 .card .large-image {
     position: fixed;
     top: 35%;
@@ -230,6 +237,7 @@ body {
     display: none; /* 默认隐藏 */
     z-index: 10; /* 让大图片在最上层 */
 }
+
 .card:hover .large-image {
     display: block; /* 悬停时显示 */
 }
@@ -237,6 +245,7 @@ body {
 .card .small-image {
     z-index: 1; /* 让小图片在大图片下层 */
 }
+
 .painting-title {
     width: 214px;
     height: 21px;
@@ -244,6 +253,7 @@ body {
     line-height: 21px;
     margin: 0 auto 2px;
 }
+
 .painting-size {
     width: 214px;
     height: 18px;
@@ -252,13 +262,15 @@ body {
     line-height: 18px;
     margin: 0 auto 10px;
 }
+
 .painting-price {
     color: #ff6700;
     font-size: 14px;
 }
+
 /* 卡片部分样式 */
 
-#rbt{
+#rbt {
     margin-left: 20px;
     margin-bottom: 30px;
     display: inline-block;
@@ -288,25 +300,91 @@ footer {
 }
 
 /* 响应式布局 */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .navigation,
     .footer-content {
         flex-direction: column;
         align-items: center;
     }
-
-    .content {
-        flex-direction: column;
+    .nav-links {
+        flex-direction: column; /* 竖着排列 */
+        align-items: center; /* 居中对齐 */
+        width: 100%; /* 宽度为 100% */
+        padding: 0; /* 去掉内边距 */
+        margin: 0; /* 去掉外边距 */   
+        position: absolute; 
+        top: 40%; /* 位置在导航栏下方 */
+        left: 50%;
+        transform: translateX(-20%)   
     }
-
+    .wrap{
+        width: 100%;
+    }
+    .nav-links li {
+        margin: 5px 0; /* 垂直间距 */
+    }
+    .nav-links a {
+        display: block;
+        font-size: 1em;
+        width: 84px;
+        height: 22px;
+        background-color:  #827100;
+        color: aliceblue;
+        text-align: center;
+    }
+    .hero-banner {
+        height: 70%;
+    }
+    .wrap-c {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .content {
+        width: 100%;
+    }
+    .left-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+     .video {
+        width: 100%;
+        margin:15px;
+    }
     .artist-section,
     .cards {
         flex-direction: column;
         align-items: center;
     }
-
+    .artist {
+        flex: 0 0 50%; /* 在小屏幕下每行显示两个artist */
+        padding: 10px; /* 可以根据需要调整间距 */
+        box-sizing: border-box; /* 确保padding不会增加元素宽度 */
+    }
+    .right-content{
+            display: flex;
+            flex-wrap: wrap; /* 在小屏幕下换行 */
+    }
+    .artist-section {
+        display: grid;
+        grid-column: 1fr;
+    }
+    .ex-container {
+        width: 100%;
+        margin: 0 auto; 
+    }
+    .cards {
+        grid-template-columns: 1fr; /* 小屏幕时单列布局 */
+    }
     .card {
         width: 90%;
         margin: 5px 0;
     }
+    .painting-title,
+    .painting-size {
+        width: 100%;
+    }
+    .card:hover .large-image {
+        display: none !important; /* 小屏幕时禁用悬停显示 */
+    }
+    
 }
