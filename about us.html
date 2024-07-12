@@ -1,98 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hebei Oil-painting Artists Gallery</title>
-    <link rel="stylesheet" href="./css/our-story.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/our-story.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav class="navigation">
-            <div class="wrap">
-                <div class="logo">
-                    <img src="./images/logo.png" alt="HEBEI OIL-PAINTING ARTISTS GALLERY Logo">
-                </div>
-                
-            <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./artists.html">Artists</a></li>
-                <li><a href="./exhibition.html">Exhibitions</a></li>
-                <li><a href="./about us.html">About Us</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-            </div>
-        </nav>
+      <nav class="navigation">
+        <div class="wrap">
+          <div class="logo">
+            <img
+              src="./images/logo.png"
+              alt="HEBEI OIL-PAINTING ARTISTS GALLERY Logo"
+            />
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./artists.html">Artists</a></li>
+            <li><a href="./exhibition.html">Exhibitions</a></li>
+            <li><a href="./about us.html">About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    
 
+    <section class="our-story">
+      <div class="about-us">
+        <!-- text then photo -->
+        <h1 class="heading">
+          About <br />
+          Us
+        </h1>
 
+        <img
+          class="firstPhoto"
+          src="images/myrons pictures/calgary about us.jpg"
+          alt=""
+        />
+      </div>
 
-    <section class="our-story" >
-        <div class="about-us"> 
-            <!-- text then photo -->
-           <h1 class="heading">
-            About <br>
-            Us
-           </h1>
-            
-                <img class="firstPhoto" src="images/myrons pictures/calgary about us.jpg" alt="">
+      <!-- photo then text -->
+      <div class="secondAboutUs">
+        <img
+          class="secondPhoto"
+          src="images/myrons pictures/calgary2.jpg"
+          alt=""
+        />
+        <div class="text-content">
+          <h1>
+            It's an Expression, <br />
+            Connection, <br />
+            and Inspiration.
+          </h1>
+          <p>
+            Heibi Oil-painting Artists Gallery is all about displaying creative
+            art for others to see and enjoy. Art is more than just a piece of
+            colours on it. <br />
+          </p>
+        </div>
+      </div>
 
-            <!-- photo then text -->
-            <div class="secondAboutUs"> 
-                <p>
-                    Heibi Oil-painting Artists Gallery is all about displaying creative art for others to see and enjoy.
-                </p>
-
-            <img class="secondPhoto" src="images/myrons pictures/calgary2.jpg" alt="">
-
+      <!-- the four of us photos -->
+      <section class="four">
+        <h1>Meet Group 6</h1>
+      </section>
+      <section>
+        <div class="container reveal">
+          <div class="cards">
+            <div class="text-card">
+              <h3>Myron</h3>
+              <p>
+                Web Design and Development Major <br />
+                Likes Skateboarding
+              </p>
             </div>
-
-            <!-- three photos -->
-            
-            
+            <div class="text-card">
+              <h3>Wanlong</h3>
+              <p>
+                Graphic Design Major <br />
+                Likes Nature
+              </p>
+            </div>
+            <div class="text-card">
+              <h3>Marshall</h3>
+              <p>
+                Web Design and Development Major <br />
+                Likes Gyoza
+              </p>
+            </div>
+            <div class="text-card">
+              <h3>Xavier</h3>
+              <p>
+                Graphic Design Major <br />
+                Likes Underground Music
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
+      <script type="text/javascript">
+        window.addEventListener("scroll", reveal);
 
+        function reveal() {
+          let reveals = document.querySelectorAll(".reveal");
+
+          for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let revealTop = reveals[i].getBoundingClientRect().top;
+            let revealpoint = 150;
+
+            if (revealTop < windowHeight - revealpoint) {
+              reveals[i].classList.add("active");
+            } else {
+              reveals[i].classList.remove("active");
+            }
+          }
+        }
+      </script>
     </section>
-    Our Story
 
-
-
-
-
-
-
-    
     <footer>
-        <hr>
-        <div class="footer-content">
-            <dl class="logo">
-                <dt></dt>
-                <dd>
-                    <a href="#">
-                        <img src="./images/logo.png" alt="HEBEI OIL-PAINTING ARTISTS GALLERY Logo">
-                    </a>
-                </dd>
-            </dl>
-            <dl class="links">
-               <dt></dt>
-               <dd><a href="#">&copy;2024 Hebei Oil-painting Artists Gallery</a></dd>
-               <dd><a href="#">About Us</a></dd>
-               <dd><a href="#">FAQ</a></dd>
-            </dl>
-            <dl id="con" class="contact">
-               
-                <dt></dt>
-                <dd>Email: <br> wwl062450wwl@gmail.com</dd>
-                <dd>Tel: <br> 0086-136-4321-2174(China) <br> 587-225-4613 (Canada)</dd>
-                <dd>Address: 3-102, Longxingyuan, Jianshe Avene, Shijiazhuang City, Hebei Province, China</dd>
-            </dl>
-        </div>
+      <hr />
+      <div class="footer-content">
+        <dl class="logo">
+          <dt></dt>
+          <dd>
+            <a href="#">
+              <img
+                src="./images/logo.png"
+                alt="HEBEI OIL-PAINTING ARTISTS GALLERY Logo"
+              />
+            </a>
+          </dd>
+        </dl>
+        <dl class="links">
+          <dt></dt>
+          <dd><a href="#">&copy;2024 Hebei Oil-painting Artists Gallery</a></dd>
+          <dd><a href="#">About Us</a></dd>
+          <dd><a href="#">FAQ</a></dd>
+        </dl>
+        <dl id="con" class="contact">
+          <dt></dt>
+          <dd>
+            Email: <br />
+            wwl062450wwl@gmail.com
+          </dd>
+          <dd>
+            Tel: <br />
+            0086-136-4321-2174(China) <br />
+            587-225-4613 (Canada)
+          </dd>
+          <dd>
+            Address: 3-102, Longxingyuan, Jianshe Avene, Shijiazhuang City,
+            Hebei Province, China
+          </dd>
+        </dl>
+      </div>
     </footer>
-    
 
     <script src="./js/gallery.js"></script>
-</body>
+  </body>
 </html>
