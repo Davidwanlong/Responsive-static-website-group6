@@ -68,6 +68,8 @@ body {
   padding: 20px;
 }
 .about-us {
+  color: #8c4356;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -103,6 +105,7 @@ body {
 }
 
 .text-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +114,7 @@ body {
 }
 
 .text-content h1 {
+  color: #8c4356;
   font-size: 2em;
   margin: 0;
   padding: 0 20px;
@@ -148,6 +152,7 @@ section .cards {
 
 section .cards .text-card {
   background: #bbcdc5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 20px;
   padding: 20px;
   width: 3000px;
